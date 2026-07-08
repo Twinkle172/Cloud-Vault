@@ -1,0 +1,15 @@
+.dashboard{
+    flex:1;
+    padding:30px;
+    background:#F8FAFC;
+    min-height:calc(100vh - 70px);
+}
+
+.dashboard h1{
+    color:#0F172A;
+    margin-bottom:10px;
+}
+
+.dashboard p{
+    color:#64748B;
+}
