@@ -1,0 +1,36 @@
+.storageChart {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+}
+
+.storageChartCircle {
+  width: 130px;
+  height: 130px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #111827 58%, transparent 60%),
+    conic-gradient(#3b82f6 var(--storage), rgba(255, 255, 255, 0.09) 0);
+}
+
+.storageChartCircle strong,
+.storageChartCircle span {
+  grid-area: 1 / 1;
+}
+
+.storageChartCircle strong {
+  transform: translateY(-8px);
+  font-size: 26px;
+}
+
+.storageChartCircle span {
+  transform: translateY(18px);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.storageChart p {
+  color: var(--muted);
+}

@@ -1,0 +1,15 @@
+.cvSearch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  color: var(--muted);
+}
+
+.cvSearch input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 15px;
+}

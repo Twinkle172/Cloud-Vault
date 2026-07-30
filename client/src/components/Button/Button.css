@@ -1,0 +1,34 @@
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  color: white;
+  font-weight: 700;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.cvButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.cvButton_primary {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+.cvButton_secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cvButton_danger {
+  background: #ef4444;
+}
+
+.cvButton_ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

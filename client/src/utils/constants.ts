@@ -8,3 +8,10 @@ export const COLORS = {
   TEXT: "#1E293B",
   BORDER: "#E2E8F0",
 };
+export const APP_NAME = "CloudVault";
+
+export const STORAGE_LIMIT_GB = 500;
+
+export const API_ORIGIN = (
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/api"
+).replace(/\/api\/?$/, "");

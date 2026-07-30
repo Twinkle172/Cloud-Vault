@@ -1,0 +1,71 @@
+.recentFiles{
+
+margin-top:35px;
+
+padding:30px;
+
+}
+
+.recentFiles table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:25px;
+
+}
+
+.recentFiles th{
+
+text-align:left;
+
+padding:18px;
+
+color:var(--muted);
+
+font-weight:600;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.recentFiles td{
+
+padding:18px;
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.fileName{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-weight:600;
+
+}
+
+.recentFiles tbody tr{
+
+transition:.3s;
+
+}
+
+.recentFiles tbody tr:hover{
+
+background:rgba(255,255,255,.04);
+
+}
+
+.more{
+
+cursor:pointer;
+
+color:var(--muted);
+
+}

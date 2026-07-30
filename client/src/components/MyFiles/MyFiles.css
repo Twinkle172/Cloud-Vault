@@ -1,0 +1,365 @@
+.myFiles {
+  width: 100%;
+  color: #fff;
+  animation: fadeIn 0.6s ease;
+}
+
+.filesHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filesHeader h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.filesHeader p {
+  margin-top: 8px;
+  color: #9fa8c8;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.viewBtn,
+.uploadButton {
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.viewBtn {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #1b2441;
+  color: white;
+}
+
+.activeView {
+  background: linear-gradient(135deg, #5b7fff, #8b5cf6);
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #5b7fff, #8b5cf6);
+  color: white;
+  font-weight: 600;
+}
+
+.uploadButton:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.uploadButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.searchBar {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 20px;
+}
+
+.searchBar input {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.searchBar input::placeholder {
+  color: #a8b3d1;
+}
+
+.filterRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filterRow button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: #1d2646;
+  color: white;
+  transition: 0.3s;
+}
+
+.filterRow button:hover,
+.filterRow .active {
+  background: linear-gradient(135deg, #5b7fff, #8b5cf6);
+}
+
+.filesTable {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fileRow {
+  display: grid;
+  grid-template-columns: minmax(220px, 2.5fr) 1fr 1fr 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.25s;
+}
+
+.fileRow:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.fileName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  min-width: 0;
+}
+
+.fileName span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileName svg {
+  color: #67e8f9;
+  flex-shrink: 0;
+}
+
+.fileActions {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBtn,
+.actionBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.iconBtn {
+  background: #242d4d;
+}
+
+.viewAction {
+  background: #4f6df5;
+}
+
+.downloadBtn {
+  background: #12b981;
+}
+
+.deleteBtn {
+  background: #ef4444;
+}
+
+.iconBtn:hover,
+.actionBtn:hover,
+.gridActions button:hover {
+  transform: translateY(-3px);
+}
+
+.gridView {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.gridCard {
+  position: relative;
+  padding: 28px;
+  border-radius: 22px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.gridCard:hover {
+  transform: translateY(-8px);
+}
+
+.favoriteIcon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: #ffd54f;
+  cursor: pointer;
+}
+
+.gridIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #5b7fff, #8b5cf6);
+  color: white;
+}
+
+.gridIcon svg {
+  font-size: 42px;
+}
+
+.gridCard h3 {
+  margin-top: 22px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.gridCard p {
+  margin: 10px 0 20px;
+  color: #a9b4d6;
+}
+
+.gridActions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gridActions button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.emptyFiles {
+  margin-top: 40px;
+  padding: 70px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.emptyFiles svg {
+  font-size: 70px;
+  color: #5b7fff;
+}
+
+.emptyFiles h2 {
+  margin-top: 18px;
+  font-size: 28px;
+}
+
+.emptyFiles p {
+  margin-top: 10px;
+  color: #9aa8ca;
+}
+
+@media (max-width: 1000px) {
+  .fileRow {
+    grid-template-columns: 1fr;
+  }
+
+  .fileActions {
+    justify-content: flex-start;
+  }
+
+  .filesHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerActions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.fileChatForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fileChatForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 110px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  font: inherit;
+  outline: none;
+}
+
+.fileChatForm textarea:focus {
+  border-color: currentColor;
+}
+
+.fileAskButton {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.fileAskButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fileAIAnswer {
+  margin-top: 24px;
+}
+
+.fileAIAnswer .summaryContent {
+  margin-top: 10px;
+}
+
+.fileAISource {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(127, 127, 127, 0.25);
+  font-size: 14px;
+  opacity: 0.75;
+}

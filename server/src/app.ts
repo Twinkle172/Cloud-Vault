@@ -1,22 +1,34 @@
-import express from "express";
+import path from "path";
 import cors from "cors";
-import helmet from "helmet";
-import morgan from "morgan";
-import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
+import express from "express";
+import authRoutes from "./routes/auth.routes";
+import fileRoutes from "./routes/file.routes";
+import aiRoutes from "./routes/aiRoutes";
+import driveRoutes from "./routes/drive.routes";
+
+dotenv.config();
 
 const app = express();
 
-app.use(cors());
-app.use(helmet());
-app.use(morgan("dev"));
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
-app.use(cookieParser());
-
-app.get("/", (_, res) => {
-  res.json({
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.get("/api/health", (_req, res) => {
+  res.status(200).json({
     success: true,
-    message: "🚀 Welcome to CloudVault API",
+    message: "CloudVault API is running",
   });
 });
+
+app.use("/api/auth", authRoutes);
+app.use("/api/files", fileRoutes);
+app.use("/api/ai", aiRoutes);
+app.use("/api/drive", driveRoutes);
 
 export default app;

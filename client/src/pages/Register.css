@@ -1,0 +1,202 @@
+.authPage{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding:30px;
+}
+
+.authBlob{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.35;
+}
+
+.blobOne{
+    background:#3B82F6;
+    top:120px;
+    left:-80px;
+}
+
+.blobTwo{
+    background:#8B5CF6;
+    right:-80px;
+    bottom:80px;
+}
+
+.authCard{
+    width:100%;
+    max-width:460px;
+    padding:40px;
+    border-radius:24px;
+}
+
+.authLogo{
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.authCard h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.authCard p{
+    text-align:center;
+    color:#94A3B8;
+    margin-bottom:30px;
+}
+
+.inputGroup{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+    padding:14px 18px;
+    border-radius:14px;
+    background:rgba(255,255,255,.05);
+}
+
+.inputGroup input{
+    flex:1;
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:15px;
+}
+
+.eye,
+.eyeButton{
+    cursor:pointer;
+}
+
+.eyeButton{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    background:transparent;
+    color:#CBD5E1;
+    padding:0;
+}
+
+.authOptions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.authOptions a{
+    color:#60A5FA;
+    text-decoration:none;
+}
+
+.loginBtn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#3B82F6,#8B5CF6);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.loginBtn:disabled{
+    opacity:.7;
+}
+
+.divider{
+    text-align:center;
+    margin:30px 0;
+    color:#94A3B8;
+}
+
+.googleBtn{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,.05);
+    color:white;
+    cursor:pointer;
+}
+
+.bottomText{
+    margin-top:30px;
+    text-align:center;
+}
+
+.bottomText a{
+    margin-left:6px;
+    color:#60A5FA;
+    text-decoration:none;
+}
+
+/* Password Strength */
+
+.strengthContainer{
+
+margin:10px 0 20px;
+
+}
+
+.strengthBar{
+
+height:8px;
+
+width:75%;
+
+border-radius:999px;
+
+background:linear-gradient(90deg,#22C55E,#3B82F6);
+
+margin-bottom:8px;
+
+}
+
+.strengthContainer span{
+
+font-size:13px;
+
+color:#94A3B8;
+
+}
+
+.terms{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:25px;
+
+font-size:14px;
+
+color:#CBD5E1;
+
+}
+
+.terms input{
+
+width:16px;
+
+height:16px;
+
+}

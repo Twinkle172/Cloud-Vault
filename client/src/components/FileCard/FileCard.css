@@ -1,0 +1,46 @@
+.fileCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+.fileCardIcon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+.fileCardBody h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.fileCardBody p {
+  color: var(--muted);
+}
+
+.fileCardActions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+}
+
+.fileCardActions button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.fileCardActions .danger {
+  background: rgba(239, 68, 68, 0.9);
+}

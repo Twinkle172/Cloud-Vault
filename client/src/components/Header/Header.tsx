@@ -1,27 +1,58 @@
 import "./Header.css";
 
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
+import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
+import AppsRoundedIcon from "@mui/icons-material/AppsRounded";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header glass fadeUp">
 
       <div className="header_left">
-        <h2>☁️ CloudVault</h2>
+
+        <MenuRoundedIcon className="icon"/>
+
+        <div className="logo">
+
+          <div className="logo_circle">
+            ☁
+          </div>
+
+          <div>
+
+            <h2>CloudVault</h2>
+
+            <span>Secure • Store • Share</span>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="header_center">
+      <div className="header_search">
+
+        <SearchRoundedIcon/>
+
         <input
-          type="text"
-          placeholder="Search files..."
+          placeholder="Search files, folders..."
         />
+
       </div>
 
       <div className="header_right">
 
-        <button>🔔</button>
+        <NotificationsNoneRoundedIcon className="icon"/>
 
-        <button>⚙️</button>
+        <SettingsRoundedIcon className="icon"/>
 
-        <button>👤</button>
+        <AppsRoundedIcon className="icon"/>
+
+        <AccountCircleRoundedIcon
+        className="avatar"/>
 
       </div>
 

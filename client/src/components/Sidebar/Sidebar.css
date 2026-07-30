@@ -1,45 +1,111 @@
-.sidebar{
-
-    width:250px;
-
-    padding:20px;
-
-    background:white;
-
-    border-right:1px solid #E2E8F0;
-
-    min-height:calc(100vh - 70px);
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  height: calc(100vh - 40px);
+  margin: 20px 0 20px 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 20px;
+  flex-shrink: 0;
+  overflow-y: auto;
 }
 
-.new_btn{
-
-    width:100%;
-
-    padding:15px;
-
-    border-radius:15px;
-
-    background:#2563EB;
-
-    color:white;
-
-    font-size:16px;
-
-    margin-bottom:25px;
+.new_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.sidebar nav{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
+.new_btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.35);
 }
 
-.sidebar p{
+.menu,
+.sidebar_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    cursor:pointer;
+.menu {
+  margin-top: 30px;
+}
 
-    color:#334155;
+.menu_item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu_item:hover {
+  background: rgba(59, 130, 246, 0.15);
+  transform: translateX(6px);
+  color: white;
+}
+
+.active {
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.25),
+    rgba(139, 92, 246, 0.18)
+  );
+  color: white;
+}
+
+.menuButton {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.cloud_status {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cloud_status h4 {
+  font-size: 15px;
+  color: white;
+}
+
+.cloud_status p {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: calc(100% - 36px);
+    min-width: 0;
+    height: auto;
+    position: static;
+    margin: 18px;
+  }
 }

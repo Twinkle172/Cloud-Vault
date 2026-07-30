@@ -1,0 +1,81 @@
+.folderModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 6, 23, 0.72);
+}
+
+.folderModal {
+  width: min(460px, 100%);
+  padding: 26px;
+}
+
+.folderModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.folderModalHeader > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.folderModalHeader button,
+.folderModalActions button {
+  border: none;
+}
+
+.folderModalHeader button {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.folderModal label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.folderModal input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+
+.folderModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.secondaryAction,
+.primaryAction {
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+.secondaryAction {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.primaryAction {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
